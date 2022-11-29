@@ -2,9 +2,7 @@
 
 The main purpose of this tool is to take spotify songs sent through iMessage, using the library _imessage-reader_, and add them into a playlist owned by me (or the person who changes the code for themself). However, I also implemented a spreadsheet uploader, supported by a google API, in order to keep track of who sent every song. 
 
-&nbsp;
 Essentially all code in **main.py**
-&nbsp;
 
 #### (1) Reason - The overall purpose behind creating this project
 #### (2) Limitations - The limitations for the project
