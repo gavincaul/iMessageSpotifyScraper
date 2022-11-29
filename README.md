@@ -6,9 +6,7 @@ The main purpose of this tool is to take spotify songs sent through iMessage, us
 #### (2) Limitations - The limitations for the project
 #### (3) Functionality - The implementations for the project
 #### (4) Future - Where I might go with this project in the future
-
-                                    <-------------------------------------------------------------------->
-                                      
+          
 ## (1) Reason
 
 A group of friends and I occasionally like to do this sort of "song challenge" in which a prompt is sent to a group chat where every person would reply with a song that fits the prompt accurately. For example, "Day 11: A song for walking in the rain." Then, everybody would send a song to the group chat--more often than not a song that person just likes--and it is added to a playlist.
