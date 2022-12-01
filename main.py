@@ -112,7 +112,8 @@ for m in messages:
        
             for p in m[1].split():
       
-                if "open.spotify.com/" in p:
+                #Checks to see if message sent is spotify link. The "..." prevents weird errors where if somebody reacts to a message, it'll just give a weird link
+                if "open.spotify.com/" in p and ""…" not in p:
                     chk = False
      
     
