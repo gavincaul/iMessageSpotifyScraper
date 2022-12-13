@@ -97,6 +97,15 @@ YOUR_NUMBER_INDEX        = 4
 WHO_SENT_THIS_TEXT_INDEX = 5
 
 
+#Shortens list of all messages to only messages from today
+def removeOldDates(arr):
+    newarr = []
+    for x in arr:
+        if str(x[2][:11]).strip() == str(date.today()):
+            newarr.append(x)
+    return newarr
+messages = removeOldDates(messages)
+
 
 #The loop that will check each message
 for m in messages:
