@@ -111,12 +111,9 @@ messages = removeOldDates(messages)
 for m in messages:
     #the loop that will check each person
     for x in personList:
-        #super super long if statement, but it checks 
-        # (1) The phone number with current message (m) sent matches any of the players
-        # (2) if that song/message was sent today
-        # (3) if that message was sent by me or not (if it is sent by me, it would have a 1 in m[5], it protects from doubling -- I'm sure I could fix that, but this method works too 
-        
-        if m[0] == x.num and m[2][:11].strip() == str(date.today()) and m[5] != 1 or (m[5] == 1 and x == Gavin and m[2][:11].strip() == str(date.today())): 
+        #Checks the phone number with current message (m) sent matches any of the players
+       
+        if m[0] == x.num: 
             # (4) Checks to see if the message sent is a spotify link, but you have to check every 'word' of the message as humans are unpredictable
        
             for p in m[1].split():
@@ -126,11 +123,10 @@ for m in messages:
                     chk = False
      
     
-                    for q in open('/Users/gavincaulfield/Downloads/MusicChallenge/songlist.txt'):
-
-
-                        if formatSong(p) == q.strip():
+                    with open('songlist.txt') as f:
+                        if formatSong(p) in f.read():
                             chk = True
+
                     if chk == False: 
                         x.song[0] = p
                     else:
