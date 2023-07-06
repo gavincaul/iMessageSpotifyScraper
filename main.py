@@ -73,9 +73,12 @@ X = Person("X", "+1911", 2, "")
 Y = Person("Y", "+18888888888", 3, "")
 #Obviously, for the sake of privacy, I removed all real names and numbers in the project
 
-#List of every person playing
-personList = [X, Y]
-
+# Map of all the people participating
+personMap = {
+    "+1911": Person("X", "+1911", 2, []),
+    "+18888888888": Person("Y", "+18888888888", 3, [])
+    # Add more people as needed
+}
 
 #Dont want to allow duplicates, so checks if song has been sent before
 def keepTrackOfSong(song):
@@ -109,28 +112,29 @@ messages = removeOldDates(messages)
 
 #The loop that will check each message
 for m in messages:
-    #the loop that will check each person
-    for x in personList:
-        #Checks the phone number with current message (m) sent matches any of the players
-       
-        if m[0] == x.num: 
-            # (4) Checks to see if the message sent is a spotify link, but you have to check every 'word' of the message as humans are unpredictable
-       
-            for p in m[1].split():
-      
-                #Checks to see if message sent is spotify link. The "..." prevents weird errors where if somebody reacts to a message, it'll just give a weird link
-                if "open.spotify.com/" in p and ""…" not in p:
-                    chk = False
-     
-    
-                    with open('songlist.txt') as f:
-                        if formatSong(p) in f.read():
-                            chk = True
+    sender_number = m[SENDER_NUMBER_INDEX]
+    message = m[MESSAGE_INDEX]
 
-                    if chk == False: 
-                        x.song[0] = p
-                    else:
-                        print(formatSong(p) + " has already been added, " + x.name + " needs a new song")
+    if sender_number in personMap:
+        person = personMap[sender_number]
+
+        # Check if the message is a Spotify link. You must check every word as humans are unpredictable
+        for p in message.split():
+      
+            #Checks to see if message sent is spotify link. The "..." prevents weird errors where if somebody reacts to a message, it'll just give a weird link
+            if "open.spotify.com/" in p and "…" not in p:
+                chk = False
+ 
+
+                with open('songlist.txt') as f:
+                    if formatSong(p) in f.read():
+                        chk = True
+
+                if chk == False: 
+                    x.song[0] = p
+                else:
+                    print(formatSong(p) + " has already been added, " + x.name + " needs a new song")
+
 for i in personList:
     if i.song != [""]:
         p = i.song[0]
