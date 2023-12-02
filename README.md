@@ -21,7 +21,7 @@ Thus, the program scans every message sent to me from certain numbers (the ones 
 
 There are some unfortunate limitations for the project.
 
-~(1) **OAuth** - The access token for spotify expires every 60 minutes. So, if I need to run the program, more often than not I need a new OAuth code.~
+~~(1) **OAuth** - The access token for spotify expires every 60 minutes. So, if I need to run the program, more often than not I need a new OAuth code.~~
 
 (2) **Group Chats** - imessage-reader does not really support group chats, but instead it reads every text as either sent to you or sent by you. For example, if there is a group chat where all the messages are being sent, the imessage-reader will just interpret them as if they were sent to you. This creates the possibility for an error, as if a participant of the challenge sends a song to the group chat, and one to you personally, the program will take whichever song was sent last (even if its not for the challenge).
 
@@ -47,7 +47,7 @@ Here are some overlying implementations I used in the project that is dedicated 
 
 Here are some of my ideas for the future.
 
-(1) **Refresh Token** - Obviously, creating a refresh token would solve the OAuth problem, but I have pretty limited knowledge on APIs. I am very interested in creating a function to do this for me, but I do not believe I have enough time to do so before this challenge begins (Dec 1st), so I am going to put this project aside until I have the time/must fix it.
+~~(1) **Refresh Token** - Obviously, creating a refresh token would solve the OAuth problem, but I have pretty limited knowledge on APIs. I am very interested in creating a function to do this for me, but I do not believe I have enough time to do so before this challenge begins (Dec 1st), so I am going to put this project aside until I have the time/must fix it.~~
 
 (2) **AWS** - Similar to the refresh token, I also plan on looking into AWS to run this program at a certain time, but the same reasons for the refresh token is why I will hold off for the time being.
 
