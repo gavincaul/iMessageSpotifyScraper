@@ -21,7 +21,7 @@ Thus, the program scans every message sent to me from certain numbers (the ones 
 
 There are some unfortunate limitations for the project.
 
-(1) **OAuth** - The access token for spotify expires every 60 minutes. So, if I need to run the program, more often than not I need a new OAuth code.
+~(1) **OAuth** - The access token for spotify expires every 60 minutes. So, if I need to run the program, more often than not I need a new OAuth code.~
 
 (2) **Group Chats** - imessage-reader does not really support group chats, but instead it reads every text as either sent to you or sent by you. For example, if there is a group chat where all the messages are being sent, the imessage-reader will just interpret them as if they were sent to you. This creates the possibility for an error, as if a participant of the challenge sends a song to the group chat, and one to you personally, the program will take whichever song was sent last (even if its not for the challenge).
 
