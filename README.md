@@ -25,9 +25,10 @@ There are some unfortunate limitations for the project.
 
 ~~(2) **Group Chats** - imessage-reader does not really support group chats, but instead it reads every text as either sent to you or sent by you. For example, if there is a group chat where all the messages are being sent, the imessage-reader will just interpret them as if they were sent to you. This creates the possibility for an error, as if a participant of the challenge sends a song to the group chat, and one to you personally, the program will take whichever song was sent last (even if its not for the challenge).~~
 
-~~Another group chat error: because of the lack of support for group chats from imessage-reader, it will not detect the messages that you send to a group chat as proper messages, only ones that you send to individual people. My loophole is just sending my song to the group chat and to myself.~~
+~~Another group chat error: because of the lack of support for group chats from imessage-reader, it will not detect the messages that you send to a group chat as proper messages, only ones that you send to individual people. My loophole is just sending my song to the group chat and to myself.~~  
 Although I did not fix this limitation in the project itself, the solution for imessage-reader's package can be found [here](https://github.com/niftycode/imessage_reader/issues/15). All credit to the author for solving this issue.   
-If you are wondering how to access this library, this nifty line will do the trick `$ python3 -c "import imessage_reader as _; print(_.__path__)" `
+If you are wondering how to access this library, this nifty line will do the trick  
+ `$ python3 -c "import imessage_reader as _; print(_.__path__)" `
 
 
 (3) **Have to manually run** - Because of the OAuth and because I haven't set it up yet, the program will not run at a set time to perform its purpose. However, clicking run is much faster than the original process, so this is still a W in my book.
