@@ -27,7 +27,7 @@ There are some unfortunate limitations for the project.
 
 ~~Another group chat error: because of the lack of support for group chats from imessage-reader, it will not detect the messages that you send to a group chat as proper messages, only ones that you send to individual people. My loophole is just sending my song to the group chat and to myself.~~    
   
-Although I did not fix this limitation in the project itself, the solution for imessage-reader's package can be found [here](https://github.com/niftycode/imessage_reader/issues/15). All credit to the author for solving this issue.   
+Although I did not fix this limitation in the project itself, the solution for imessage-reader's package can be found [here](https://github.com/niftycode/imessage_reader/issues/15). All credit to the [author](https://github.com/SilasStokes) for solving this issue.   
 
 If you are wondering how to access this library, this nifty line will do the trick  
  `$ python3 -c "import imessage_reader as _; print(_.__path__)" `
